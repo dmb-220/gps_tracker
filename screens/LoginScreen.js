@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Alert, Button, Text, View, ScrollView, StyleSheet, TextInput } from 'react-native';
+import { StatusBar, Alert, Button, Text, View, ScrollView, StyleSheet, TextInput } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
@@ -41,6 +41,7 @@ export default function LoginScreen({ navigation }) {
 	
 	return (
 		<View style={{ flex: 1, justifyContent: 'center', padding: 16 }}>
+			<StatusBar barStyle="dark-content" />
 		  <Text style={{ fontSize: 24, marginBottom: 16 }}>PRISIJUNGIMAS</Text>
 		  <TextInput
 			placeholder="El. paštas"

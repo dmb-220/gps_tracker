@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Alert, Button, Text,View, ScrollView, StyleSheet, Pressable, BackHandler, Vibration } from 'react-native';
+import { StatusBar, Alert, Button, Text,View, ScrollView, StyleSheet, Pressable, BackHandler, Vibration } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -69,6 +69,7 @@ export default function HomeScreen({ navigation }) {
 				
   return (
     <View style={{ flex: 1, margin: 10 }}>
+		<StatusBar barStyle="dark-content" />
 		{!user ? (
 		  <>
 			<Pressable
